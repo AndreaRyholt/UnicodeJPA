@@ -12,6 +12,11 @@ public class RestController {
         return "unicode=" + i + "char=" + c;
     }
 
+    @GetMapping("/char/{c}")
+    public String charToUnicode(@PathVariable char c) {
+        int i = (int) c;
+        return "char= " + c + " unicode= " + i;
+    }
 
 
 }
