@@ -15,5 +15,4 @@ public interface UnicodeRepository extends JpaRepository<Unicode, Integer> {
 
 
 
-
 }

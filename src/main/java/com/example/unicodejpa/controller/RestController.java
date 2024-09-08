@@ -18,5 +18,17 @@ public class RestController {
         return "char= " + c + " unicode= " + i;
     }
 
+    @GetMapping("/print-letters/{c}/{i}")
+    public String generateLetters(@PathVariable char c,@PathVariable int i) {
+        StringBuilder sb = new StringBuilder();
+        char letterOfChoice = c;
+
+            for (int ii=0;ii < i; ii++) {
+                sb.append(letterOfChoice);
+                letterOfChoice++;
+            }
+        return sb.toString();
+    }
+
 
 }
